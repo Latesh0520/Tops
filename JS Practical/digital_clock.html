@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="clock"></div>
+    <script>
+        setInterval(function(){
+            let dt = new Date();
+            let second = 0;
+            let minute = 0;
+            if(dt.getSeconds() > 9){
+                second = dt.getSeconds();
+            }else{
+                second ='0'+ dt.getSeconds();
+            }
+            if(dt.getMinutes() > 9){
+                minute = dt.getMinutes();
+            }else{
+                minute ='0'+ dt.getMinutes();
+            }
+            if(dt.getHours() > 12){
+                document.querySelector('.clock').innerHTML = (dt.getHours() - 12) + ':' + minute + ':' + second + ' PM';
+            }else{
+                document.querySelector('.clock').innerHTML = dt.getHours() + ':' + minute + ':' + second + ' AM';
+            }
+        },1000)
+    </script>
+</body>
+</html>

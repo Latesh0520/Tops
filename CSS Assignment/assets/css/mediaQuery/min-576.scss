@@ -1,0 +1,342 @@
+@import './mixin';
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    header{
+        .menubar{
+            .nav-bar{
+                display: none !important;
+            }
+        }
+    }
+    .tryitfree{
+        width: 90%;
+        .save{
+            display: none;
+        }          
+        .desc{
+             width: 100%;
+             font-size: 26px;
+             line-height: 36px;
+            
+        }          
+    }
+    .overview{
+        max-width: 100%;
+        .sidebar{
+            width: auto;
+            padding: 5px;
+            .profile{
+                height: 60px;
+                img{
+                  height: 30px;width: 30px;  
+                }
+            }
+            .iconlist{
+                font-size: 14px;
+            }
+        }
+        .content{
+            padding: 10px;
+            .overview-heading{
+                margin: 10px 0;
+                h1{
+
+                    font-size: 18px;
+                }
+            }
+            .grid{
+                .col{
+                    padding: 10px;
+                    .up-down{
+                        .heading{
+                            font-size: 18px;
+                        }
+                        .desc{
+                            font-size: 10px;
+                            line-height: 10px;
+                        }
+                        .percentage{
+                            .up{
+                                font-size: 10px;
+                                .fa-solid{
+                                    font-size: 10px;
+                                }
+                            }
+                            .down{
+                                font-size: 10px;
+                                .fa-solid{
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &.launched-project{
+                        .heading{
+                            font-size: 14px;
+                            margin-bottom: 23.5px;
+                        }
+                        .graph{
+                            .bar{
+                                .bar-div{
+                                    width: 23px !important;
+                                    .bar-color{
+                                        width: 17px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hour-marked{
+                        .heading{
+                            font-size: 14px;
+                        }
+                        .graph{
+                            .hours{
+                                .number{
+                                    height: 45px;                            
+                                    .bar{
+                                        bottom: 50px !important;
+                                        width: 32px !important;
+                                        margin-left: 8.5px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .trustedby{
+        margin: 40px 15px;
+    }
+    .timeline-section{
+        .container{
+            padding: 0 15px;
+        }
+        .row{
+            flex-direction: column;
+            gap: 20px 0;
+            margin: 0 15px;
+            .timeline-review{
+                .timeline{
+                    padding: 15px;
+                    width: 290px;
+                    h2{
+                        font-size: 14px;
+                    }
+                    .timeline-content{
+                        ul{
+                            li{
+                                &::after{
+                                    top: 40px;
+                                    left: 14px;
+                                    height: 200px;
+                                }
+                                &:last-child {
+                                    &::after {
+                                        top: 287px;
+                                        height: 73px;
+                                    }
+    
+                                }
+                            }
+                        }
+                        .time{
+                            .icon{
+                                .fa-solid{
+                                    font-size: 10px;
+                                    padding: 8px;
+                                }
+                            }
+                        }
+                        .tag-message{
+                            margin-left: 35px;
+                            li{
+                                padding: 10px;
+                                p{
+                                    font-size: 11px ;
+                                }
+                            }
+                        }
+                    }
+                }
+                .message{
+                    padding: 15px;
+                    width: 264px;
+                    height: 250px;
+                    left: 200px;
+                    top: 160px;
+                    .message-box{
+                        height: 110px;
+                        padding: 10px;
+                    }
+                    .send-btn{
+                        width: 100%;
+                    }
+                }
+            }
+            .survey{
+                margin-top: 20px;
+                .list{
+                    width: 100%;
+                    .list-data{
+                        text-align: center;
+                        padding: 27px 100px;
+                        &.active{
+                            border-bottom:8px solid #794CFF;
+                            border-left: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .work-easier{
+        .heading{
+            h2{
+                font-size: 20px;
+            }
+        }
+        .row{
+            grid-template-columns: repeat(1,1fr);
+            .col{
+                // padding: 20px 120px;
+                display: none;
+                &:nth-child(1),&:nth-child(2),&:nth-child(3){
+                    display: block;
+                }
+                div{
+                    width: 300px;
+                    margin: auto;
+                    text-align: center;
+                    .img{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+    }
+    .work-everyday{
+        .row{
+            flex-direction: column-reverse;
+                .content{
+                    width: 100%;
+                }
+                .graphs{
+                    width: 100%;
+                    .hour-marked{
+                        width: 70%;
+                        .graph{
+                            .hour-number,.month-col span{
+                                font-size: 11px;
+                            }
+                            .bar{
+                                width: 26px !important;
+                            }
+                        }
+                    }
+                    .launched-project{
+                        top: 180px;
+                        left: 240px;
+                        padding: 15px;
+                        .graph{
+                            span{
+                                font-size: 11px;
+                                padding: 5px 0;
+                            }
+                        }
+                    }
+                }
+                .content{
+                    div{
+                        margin-top: 50px;
+                        text-align: center;
+                    }
+                    h1{
+                        font-size: 24px;
+                        line-height: 27px;
+                        text-align: center;
+                        width: 253px;
+                        margin: auto;
+                    }
+                    p{
+                        width: 350px;
+                        text-align: center;
+                        margin: 15px auto;
+                    }
+                    button{
+                        width: 300px;
+                        height: 60px;
+                    }
+                }
+        }
+    }
+    .testimonials{       
+        .row{
+            grid-template-columns: repeat(1,1fr);
+            margin: 0;
+            .col{
+                display: none;
+                &:nth-child(1){
+                    display: block;
+                    border: none;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .app-gplay-appstore-section {
+        background-color: #796EFF;
+        
+        .app-gplay-appstore{                    
+            margin: 20px 0;
+            padding: 20px 0;
+            background-color: transparent;
+            .row {
+                display: block;
+                .col{
+                    width: 100%;
+                    margin: 20px 0; 
+                    h2{
+                        margin: 0 auto;
+                        line-height: 35px;
+                        font-size: 25px;
+                        text-align: center;
+                    }
+                    .app-images{
+                        img{
+                            height: 46px;
+                            width: 160px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        .upper-footer{
+            .row{
+                grid-template-columns: repeat(1,1fr);
+                .col{
+                    .heading{
+                        margin: 10px 0;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    ul{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .bottom-footer{
+            .social{
+                display: none;
+            }
+        }
+    }
+}

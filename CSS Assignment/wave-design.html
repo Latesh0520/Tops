@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;  
+                font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+            }
+            .wave-design{
+                position: relative;
+                background-image: url('./assets/image/img9.avif');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 400px;
+                padding-top: 150px;
+                padding-bottom: 200px;
+            }
+            .wave-design .upper-content{
+                text-align: center;
+            }
+            .wave-design .upper-content h1{
+                font-size: 40px;
+                color: #fff;
+                letter-spacing: 2px;
+                margin: 10px 0;
+            }
+            .wave-design .upper-content p{
+                margin: 10px 0;
+                color: #fff;font-size: 18px;
+                letter-spacing: 1px;
+            }            
+            .svg-container {
+                position: absolute;
+                bottom: 0;         
+            }
+            .row{
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                margin-top: 100px;
+                height: 300px;
+            }
+            .row .col{
+                text-align: center;
+                position: relative;
+            }
+            .row .col .img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+            }
+            .row .col .img1{
+                top: 54px;
+            }
+            .row .col .img2{
+                top: 104px;
+            }
+            .row .col .img3{
+                top: 33px;
+            }
+            .row .col .img4{
+                top: 16px;
+            }
+            .row .col .img5{
+                top: 86px;
+            }
+            .row img{
+                outline: 4px solid #0000006e;
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                transition: .5s ease;
+            }
+            .row .col .position{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 48;
+                color: #fff;  
+                transition: 0.5s ease;
+                transform: scaleY(0);  
+                transform-origin: 0% 0%;            
+            }
+            .row .col .position::after{
+                content: '';
+                position: absolute;
+                top: -44px;
+                height: 52px;
+                width: 2px;
+                background: #fff;
+            }
+            .row .col .position h4{
+                font-size: 20px;
+                margin: 7px 0;
+                color: red;
+            }
+            .row .col .position p{
+                font-size: 16px;
+                margin: 7px 0;
+            }
+            .row .col .position1{
+                top: calc(54px + 100px);
+            }
+            .row .col .position2{                
+                top: calc(104px + 100px);
+            }
+            .row .col .position3{
+                top: calc(33px + 100px);
+
+            }
+            .row .col .position4{
+                top: calc(16px + 100px);
+
+            }
+            .row .col .position5{
+                top: calc(86px + 100px);
+
+            }
+            .row .col:hover .position{
+                transform:  scaleY(1);
+            }
+            .row .col:hover .img{
+            }
+            .row .col:hover .img img{
+                
+                transform: scale(1.2);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="wave-design">
+            <div class="upper-content">
+                <h1>Our team</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Laudantium, itaque?</p>
+                <div class="hr-line"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="img img1">
+                        <img src="./assets/image/latesh profile.jpg" alt="">
+                    </div>
+                    <div class="position position1">
+                        <h4>Front-End Developer</h4>
+                        <p>Angular Developer</p>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="img img2">
+                        <img src="./assets/image/latesh profile.jpg" alt="">
+                    </div>
+                    <div class="position position2">
+                        <h4>Front-End Developer</h4>
+                        <p>Angular Developer</p>
+                    </div>                    
+                </div>
+                <div class="col">
+                    <div class="img img3">
+                        <img src="./assets/image/latesh profile.jpg" alt="">
+                    </div>
+                    <div class="position position3">
+                        <h4>Front-End Developer</h4>
+                        <p>Angular Developer</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img img4">
+                        <img src="./assets/image/latesh profile.jpg" alt="">
+                    </div>
+                    <div class="position position4">
+                        <h4>Front-End Developer</h4>
+                        <p>Angular Developer</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="img img5">
+                        <img src="./assets/image/latesh profile.jpg" alt="">
+                    </div>
+                    <div class="position position5">
+                        <h4>Front-End Developer</h4>
+                        <p>Angular Developer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="svg-container">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" id="visual"
+                    viewBox="0 0 1511 600" width="1525" height="600"
+                    version="1.1"><path
+                        d="M0 221L66.7 249.8C133.3 278.7 266.7 336.3 400 336C533.3 335.7 666.7 277.3 800 251.8C933.3 226.3 1066.7 233.7 1200 265.8C1333.3 298 1466.7 355 1533.3 383.5L1600 412L1600 601L1533.3 601C1466.7 601 1333.3 601 1200 601C1066.7 601 933.3 601 800 601C666.7 601 533.3 601 400 601C266.7 601 133.3 601 66.7 601L0 601Z"
+                        fill="#ff6f6157" stroke-linecap="round"
+                        stroke-linejoin="miter" /></svg>
+            </div>
+        </section>
+    </body>
+</html>

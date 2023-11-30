@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            height: 100vh;
+            background-image: url(./img8.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        body::after{
+            content: '';
+            background-color: #000;
+            opacity: 0.5;
+            left: 0;top: 0;right: 0;bottom: 0;
+            position: absolute;
+            z-index: -1;
+        }
+        #menu{
+            color: #fff;
+            background-color: rgb(5, 5, 70);
+            width: 300px;
+            padding: 30px 20px;
+            height: 100%;
+            transform: translateX(-100%);
+            position: absolute;
+            top: 0;left: 0;
+            transition: 0.5s ease all;
+        }
+        #menu.show{
+            transform: translateX(0%);
+        }
+        li{
+            padding: 10px;
+        }
+        #btn{
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            font-size: 30px;
+        }
+        .far{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn"  onclick="open_menu()"><span class="fa fa-bars"></span></button>
+    <div id="menu">
+        <span class="far fa-times-circle" onclick="open_menu()" style="float: right;"></span>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Services</li>
+            <li>Pages</li>
+            <li>Registration</li>
+            <li>Login</li>
+        </ul>
+    </div>
+    <script>
+        function open_menu(){
+            document.getElementById('menu').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

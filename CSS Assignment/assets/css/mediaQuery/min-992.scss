@@ -1,0 +1,339 @@
+@import './mixin';
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    header{
+        .menubar{
+            .nav-bar{
+                display: flex !important;
+            }
+            .bar-icon{
+                display: none;
+            }
+        }
+    }
+    .tryitfree{
+        width: 90%;
+        .save{
+            display: initial;
+        } 
+    }
+    .overview{
+        max-width: 920px;
+        .sidebar{
+            width: 85px;
+            padding: 0;
+            .profile{
+                height: 100px;
+                img{
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+            .iconlist{
+                font-size: 16px;
+            }
+        }
+        .content{
+            padding: 20px 40px;
+            .overview-heading{
+                margin-top: 20px;
+                margin-bottom: 35px;
+                h1{
+                    font-size: 24px;
+                }
+            }
+            .grid{
+                .col{
+                    padding: 20px;
+                    .up-down{
+                        .heading{
+                            font-size: 32px;
+                        }
+                        .desc{
+                            font-size: 14px;
+                            line-height: 20px;
+                        }
+                        .percentage{
+                            .up{
+                                font-size: 12px;
+                                .fa-solid{
+                                    font-size: 12px;
+                                }
+                            }
+                            .down{
+                                font-size: 12px;
+                                .fa-solid{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    &.launched-project{
+                        .heading{
+                            font-size: 16px;
+                            margin-bottom: 50px;
+                        }
+                        .graph{
+                            .bar{
+                                .bar-div{
+                                    width: 32px !important;
+                                    .bar-color{
+                                        width: 25px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.hour-marked{
+                        .heading{
+                            font-size: 16px;
+                        }
+                        .graph{
+                            .hours{
+                                .number{
+                                    height: 50px;                            
+                                    .bar{
+                                        bottom: 60px !important;
+                                        width: 44px !important;
+                                        margin-left: 18.5px !important;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .trustedby{
+        margin: 80px 50px;
+    }
+    .timeline-section{
+        .container{
+            padding: 0;
+        }
+        .row{
+            flex-direction: unset;
+            gap: unset;
+            margin: unset;
+            .timeline-review{
+                .timeline{
+                    padding:20px;
+                    width: 340px;
+                    h2{
+                        font-size: 16px;
+                    }
+                    .timeline-content{
+                        ul{
+                            li{
+                                &::after{
+                                    top: 50px;
+                                    left: 18px;
+                                    height: 240px;
+                                }
+                                &:last-child {
+                                    &::after {
+                                        top: 350px;
+                                        height: 70px;
+                                    }
+    
+                                }
+                            }
+                        }
+                        .time{
+                            .icon{
+                                .fa-solid{
+                                    font-size: unset;
+                                    padding: 10px;
+                                }
+                            }
+                        }
+                        .tag-message{
+                            margin-left: 45px;
+                            li{
+                                padding: 15px;
+                                p{
+                                    font-size: 13px ;
+                                }
+                            }
+                        }
+                    }
+                }
+                .message{
+                    width: 250px;
+
+                    padding: 20px 35px;
+                    height: 362px;
+                    top: 126px;
+                    left: 267px;
+                    .message-box{
+                        height: 195px;
+                        padding: 20px;
+                    }
+                    .send-btn{
+                        width: 100%;
+                    }
+                }
+            }
+            .survey{
+                margin-top: unset;
+                .list{
+                    width: 100%;
+                    .list-data{
+                        text-align: center;
+                        padding: 27px 15px;
+                        &.active{
+                            border-bottom:unset;
+                            border-left: 8px solid #794CFF;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .work-easier{
+        .heading{
+            h2{
+                font-size: 20px;
+            }
+        }
+        .row{
+            grid-template-columns: repeat(3,1fr);
+            .col{
+                // padding: 20px 120px;
+                display: block;                
+                div{
+                    width:unset;
+                    margin: auto;
+                    text-align: center;
+                    .img{
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
+        .viewmorebenefit{
+            display: none;
+        }
+    }
+    .work-everyday{
+        .row{
+            flex-direction: row;
+                .content{
+                    width: unset;
+                    div{
+                        margin-top: unset;
+                        text-align: unset;  
+                    }
+                    h1{
+                        @include heading(54, 60); 
+                        width: 500px;
+                        margin: unset;
+                        text-align: left;
+                    }
+                    p{
+                        width: 413px;
+                        text-align: left;
+                        margin:unset;
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                    button{
+                        width: unset;
+                        height: unset;
+                    }
+                }
+                .graphs{
+                    width: unset;
+                    .hour-marked{
+                        width: 400px;
+                        .graph{
+                            .hour-number,.month-col span{
+                                font-size: 16px;
+                            }
+                            .bar{
+                                width: 26px !important;
+                            }
+                        }
+                    }
+                    .launched-project{
+                        top: 180px;
+                        left: 240px;
+                        padding: 15px;
+                        .graph{
+                            span{
+                                font-size: 11px;
+                                padding: 5px 0;
+                            }
+                        }
+                    }
+                }              
+        }
+    }
+    .testimonials{
+        
+        .heading{
+            font-size: 22px;
+            width: 250px;
+            line-height: 25px;
+        }
+        .desc{
+            font-size: 20px;
+        }
+        .row{
+            grid-template-columns: repeat(3,1fr);
+            margin: auto;
+            .col{
+                display: flex;
+                &:nth-child(1){                
+                    display: flex;
+                    border-top: 4px solid #35414B;  
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .app-gplay-appstore-section {
+        background-color: unset;        
+        .app-gplay-appstore{                                
+            padding: 50px 30px;
+            background-color: #796EFF;    
+            .row{
+                display: flex;
+                .col{
+                    h2{
+                        font-size: 32px;
+                        line-height: 48px;
+                        text-align: left;
+                    }
+                }
+            }        
+        }
+    }
+    footer{
+        .upper-footer{
+            .row{
+                grid-template-columns: repeat(4,1fr);
+                .col{
+                    .heading{
+                        margin: 10px 0;
+                        display: unset;                        
+                        span.fa-solid{
+                            display: none;
+                        }
+                    }
+                    ul{
+                        display: block;
+                    }
+                }
+            }
+        }
+        .bottom-footer{
+            .social{
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .overview .content .grid .col.hour-marked .graph .hours .number .bar {
+    width: 40px !important;
+    margin-left: 13.5px !important;
+  }
+  .work-everyday .launched-project {
+    left: 335px;
+  }
+  .app-gplay-appstore-section {
+    background-color: unset;
+  }
+  .app-gplay-appstore-section .app-gplay-appstore {
+    padding: 50px 30px;
+    background-color: #796EFF;
+  }
+}/*# sourceMappingURL=min-768.css.map */

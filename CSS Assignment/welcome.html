@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            max-width: 100vw;
+            margin-top: 40px
+        }
+        .background_image{
+            position: absolute;
+            z-index: -1;
+            height: 600px;
+            width: 100%;
+            top: 0;
+            filter: brightness(0.6);
+            clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+        }
+        .content{
+            margin-top: 40px;
+        }
+        .navbar{
+            display: flex;
+            width: 60%;
+            justify-content: space-between;
+            margin: auto;
+            
+        }
+        .logo{
+            display: flex;
+            align-items: center;
+        }
+        .logo .logo-text{
+            font-size: 20px;
+            color: white;
+            height: 30px;
+            border: 1px solid white;
+            width: 70px;
+            display: flex;
+            align-items: center;
+        }
+        .logo .logo-text .l{
+            color: black;
+            background-color: #fff;
+            padding: 4px 10px;
+        }
+
+        .menu{
+            display: flex;
+        }
+        .menu-items{
+            display: flex;
+            align-items: center;
+            gap: 10px 20px;
+            list-style: none;
+        }
+        .menu-item a{
+            font-size: 16px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition-duration: 2s;
+        }
+        .menu-item.active a,.menu-item:hover a{
+            color:red;
+        }
+        
+        .slider-content{
+            width: 500px;
+            text-align: center;
+            margin: auto;
+            color: white;
+            margin-top: 100px;
+        }
+        .our-client{
+            text-transform: capitalize;
+            font-size: 17px;
+            font-family: system-ui;
+        }
+        .slider-content h1{     
+            font-size: 60px;
+            margin: 20px 0;
+            font-family: sans-serif;
+            letter-spacing: 3px;
+        }
+        .slider-content .content-text{
+            padding: 0 30px;
+        }
+        .buttons{
+            margin-top: 50px;
+        }
+        button{
+            padding: 10px 40px;
+            background-color: transparent;
+            text-transform: uppercase;
+            border: 2px solid white;
+            color: white;
+            font-weight: 600;
+            margin: 0 10px;
+            cursor: pointer;
+            transition-duration: 2s;
+        }
+        button.get_started,button:hover{
+            background-color: #e44c3c;
+            border-color: #e44c3c;
+        }
+        .container-cols{
+            max-width: 1500px;
+            margin:40px auto 30px;
+        }
+
+        .row{
+            margin: 0 150px;
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .row .col{
+            text-align: center;
+        }
+        .container-cols h5{
+            font-size: 18px;
+            margin-top: 30px;
+            color: #6c6c6c;
+            font-family: system-ui;
+        }
+        .row .col hr{
+            border-color: #6c6c6c;
+            margin: 10px auto;
+        }
+        .container-cols .row .col:nth-child(1) h5{
+            color: #e44c3c;
+        }
+        .container-cols .row .col h5:hover{
+            color: #e44c3c;
+        }
+
+        .icon{
+            height: 70px;
+            width: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #8080801a;
+            margin: auto;
+            color: brown;
+            font-weight: 700;
+            font-size: 20px;
+        }
+        .icon.icon1{
+            transform: rotate(314deg);
+            border-color: brown;
+        }
+        .icon.icon1 span{
+            transform: rotate(45deg);
+        }
+        .down-arrow{
+            position: relative;
+            height: 168px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+        }
+        .down-arrow .fa-solid{
+            height: 40px;
+            width: 40px;
+            outline: 4px solid #ffffff3d;
+            background-color: #fff;
+            display: flex;
+            font-size: 18px;
+
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="background_image">
+                <img src="./assets/image/img8.jpg" alt class="background_image">
+            </div>
+            <div class="content">
+                <nav>
+                    <div class="navbar">
+                        <div class="logo">
+                            <div class="logo-text"><span class="l">L</span>&nbsp;ogo</div>
+                        </div>
+                        <div class="menu">
+                            <ul class="menu-items">
+                                <li class="menu-item active">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">ABout us</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">portfolio</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">pricing</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">Team</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">blog</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#">contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="slider-content">
+                    <p class="our-client">our client are our first priority</p>
+                    <h1>Welcome to sky</h1>
+                    <span class="divider"></span>
+                    <p class="content-text">Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit.
+                        Facere, sint reprehenderit architecto esse, iusto
+                        dolore, sed iste similique natus ab porro? Amet sit iure
+                        voluptatem vitae dolores neque atque sunt.</p>
+                    <div class="buttons">
+                        <button class="get_started">get started now</button>
+                        <button>learn more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="down-arrow">
+                <span class="fa-solid fa-arrow-down"></span>
+            </div>
+        </div>
+        <div class="container-cols">
+            <div class="row">
+                <div class="col">
+                    <div class="icon icon1"> 
+                        <span class="fa-solid fa-glasses"></span>
+                    </div>
+                    <h5>Sleek design</h5>
+                    <hr width="50px">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ab adipisci voluptate libero, provident voluptatibus
+                        explicabo excepturi nesciunt modi vero doloribus ea
+                        rerum id officia totam maiores eos dolorem, quasi
+                        laudantium.</p>
+                </div>
+                <div class="col">
+                    <div class="icon"> 
+                        <span class="fa-regular fa-heart"></span>
+                    </div>
+                    <h5>clean code</h5>
+                    <hr width="50px">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ab adipisci voluptate libero, provident voluptatibus
+                        explicabo excepturi nesciunt modi vero doloribus ea
+                        rerum id officia totam maiores eos dolorem, quasi
+                        laudantium.</p>
+                </div>
+                <div class="col">
+                    <div class="icon"> 
+                        <span class="fa-regular fa-lightbulb"></span>
+                    </div>
+                    <h5>creative idea</h5>
+                    <hr width="50px">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ab adipisci voluptate libero, provident voluptatibus
+                        explicabo excepturi nesciunt modi vero doloribus ea
+                        rerum id officia totam maiores eos dolorem, quasi
+                        laudantium.</p>
+                </div>
+                <div class="col">
+                    <div class="icon"> 
+                        <span class="fa-regular fa-comments"></span>
+                    </div>
+                    <h5>free support</h5>
+                    <hr width="50px">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Ab adipisci voluptate libero, provident voluptatibus
+                        explicabo excepturi nesciunt modi vero doloribus ea
+                        rerum id officia totam maiores eos dolorem, quasi
+                        laudantium.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        body{
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-control{
+            width: 100%;
+            padding: 5px 10px;
+            border:2px solid black;
+            max-width: 300px;
+        }
+        .form-control:focus{
+            outline: none;
+        }
+        .form table{
+            width: 700px;
+        }
+        td{
+            padding: 10px 0;
+        }
+        td:nth-child(1){
+            padding-right: 20px;
+        }
+        button{
+            border: none;
+            background-color: blue;
+            color: #fff;
+            height: 40px;
+            font-size: 20px;
+            padding: 0 20px;
+            border-radius: 15px 0;
+        }
+        .error{
+            color: red;
+            font-size: 13px;
+        }
+        .showpass_icon{
+            position: absolute;
+            height:100%;
+            width: 30px;
+            display: grid;
+            place-content: center;
+            right: 0px;
+            z-index: 10;
+            background-color: #c0b8b8;
+            border: 2px solid;
+            border-left: none;
+            
+        }
+        .password_td{
+            max-width: 300px;
+            position: relative;
+            display: flex;
+        }
+        .showpass_icon  #showpass{
+            opacity: 0;
+        }
+        .showpass_icon .icon{
+            position: absolute;
+            top: 0;left: 0;right: 0;bottom: 0;
+            z-index: -1;
+            display: grid;
+            place-content: center;
+        }
+        #display_data{            
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            display: grid;
+            place-content: center;
+            background: gray;
+            color: #fff;
+            z-index: 1000;
+            transform: translateY(-100%);
+            transition: 0.5s ease all;
+        }
+        #cancel{
+            height: 50px;
+            width: 50px;
+            display: grid;
+            fill: #fff;
+            place-content: center;
+            border: 3px solid;
+            border-radius: 50%;
+        }
+        #cancel svg{
+            height: 30px;
+        }
+        .loader{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            left: 0;right: 0;bottom: 0;top: 0;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="loader"></div>
+        <div class="form">
+            <h1>Registration for Job</h1>
+            <!-- <form> -->
+            <table>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" id="fname" class="form-control"
+                            placeholder="Enter your First Name">
+                    </td>
+                    <td><span class="error" id="fname_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Middle Name</td>
+                    <td><input type="text" id="mname" class="form-control"
+                            placeholder="Enter your Middle Name">
+                    </td>
+                    <td><span class="error" id="mname_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" id="lname" class="form-control"
+                            placeholder="Enter your Last Name">
+                    </td>
+                    <td><span class="error" id="lname_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><textarea name id="address" cols="30" rows="3"
+                            class="form-control"
+                            placeholder="Enter your Address"></textarea>
+                    </td>
+                    <td><span class="error" id="address_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><input type="date" id="date" class="form-control">
+                    </td>
+                    <td><span class="error" id="dob_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male"
+                            checked>
+                        <label for="male">Male</label>
+                        <input type="radio" name="gender" id="female"
+                            value="female">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Experience</td>
+                    <td>
+                        <select name="experience" id="experience"
+                            class="form-control">
+                            <option value="-">---Select your experiece---</option>
+                            <option value="exp1">exp1</option>
+                            <option value="exp2">exp2</option>
+                            <option value="exp3">exp3</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td>
+                        <input type="text" id="mobileno" class="form-control"
+                            placeholder="Enter your Mobile No">
+                    </td>
+                    <td><span class="error" id="mobileno_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><input type="email" id="email" class="form-control"
+                            placeholder="Enter your Email Id">
+                    </td>
+                    <td><span class="error" id="email_error"></span></td>
+                </tr>
+                <tr>
+                    <td>Create Password</td>
+                    <td>
+                        <div class="password_td">
+                            <input type="password" id="password"
+                                class="form-control"
+                                placeholder="Enter Password">
+                            <span class="showpass_icon"><input type="checkbox"
+                                    name="showpass" id="showpass"><span
+                                    class="icon"><svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        height="1em" viewBox="0 0 576 512"><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z" /></svg></span></span>
+                        </div>
+                    </td>
+                    <td><span class="error" id="password_error"></span></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="btn">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="display_data">
+            <div style="display: flex;justify-content: center;margin-bottom: 30px;">
+                <span id="cancel"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></span>
+            </div>
+            <table border="1">
+                <tr>
+                    <td>First Name</td>
+                    <td><span id="fname_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Middle Name</td>
+                    <td><span id="mname_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><span id="lname_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td><span id="address_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><span id="dob_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td><span id="gender_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Experience</td>
+                    <td><span id="experience_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Mobile No</td>
+                    <td><span id="mobileno_disp"></span></td>
+                </tr>
+                <tr>
+                    <td>Email Id</td>
+                    <td><span id="email_disp"></span></td>
+                </tr>
+            </table>
+        </div>
+        <!-- </form> -->
+        <script>
+            var btn = document.getElementById('btn');
+
+            let password_show = document.getElementById('password')
+            let showpass = document.getElementById('showpass');
+            showpass.addEventListener('change',()=>{
+                if(password_show.type == 'password'){
+                    password_show.type = 'text'
+                    document.querySelector('.showpass_icon .icon svg').style.fill = '#fff';
+                }else{
+                    password_show.type = 'password'
+                    document.querySelector('.showpass_icon .icon svg').style.fill = '#000';
+                }
+            })
+            
+
+            btn.addEventListener('click',()=>{
+                let fname = document.getElementById('fname').value;
+                let mname = document.getElementById('mname').value;
+                let lname = document.getElementById('lname').value;
+                let address = document.getElementById('address').value;
+                let date = document.getElementById('date').value;
+                let gender = document.querySelector("input[type='radio'][name='gender']:checked").value;            
+                let experience = document.getElementById('experience').value;
+                let mobileno = document.getElementById('mobileno').value;
+                let email = document.getElementById('email').value;
+                let password = document.getElementById('password').value;
+
+                let mobile_pattern = /^[0-9]*$/;
+                
+                if((fname == '') || (lname == '') || (mname == '') || (address == '') || (date == '') || (mobileno == '') || (email == '') || (password == '')){
+                    if(fname == ''){
+                        document.getElementById('fname_error').innerHTML = 'Please Enter First Name *';
+                    }else{
+                        document.getElementById('fname_error').innerHTML = '';                    
+                    }
+                    if(mname == ''){
+                        document.getElementById('mname_error').innerHTML = 'Please Enter middle Name *';
+                    }else{                    
+                        document.getElementById('mname_error').innerHTML = '';                    
+                    }
+                    if(lname == ''){
+                        document.getElementById('lname_error').innerHTML = 'Please Enter last Name *';
+                    }else{
+                        document.getElementById('lname_error').innerHTML = '';                    
+                    }
+                    if(address == ''){
+                        document.getElementById('address_error').innerHTML = 'Please Enter Your Address *';
+                    }else{
+                        document.getElementById('address_error').innerHTML = '';                    
+                    }
+                    if(date == ''){
+                        document.getElementById('dob_error').innerHTML = 'Please Select Your Date of Birth *';
+                    }else{
+                        document.getElementById('dob_error').innerHTML = '';                    
+                    }
+                    if(mobileno == ''){
+                        document.getElementById('mobileno_error').innerHTML = 'Please Select Your Date of Birth *';
+                    }
+                    else if(!(mobile_pattern.match(mobileno))){
+                        document.getElementById('mobileno_error').innerHTML = 'Please Enter valid';                    
+                    }
+                    else{
+                        document.getElementById('mobileno_error').innerHTML = '';                    
+                    }
+                    if(email == ''){
+                        document.getElementById('email_error').innerHTML = 'Please Select Your Date of Birth *';
+                    }else{
+                        document.getElementById('email_error').innerHTML = '';                    
+                    }
+                    if(password == ''){
+                        document.getElementById('password_error').innerHTML = 'Please Select Your Date of Birth *';
+                    }else{
+                        document.getElementById('password_error').innerHTML = '';                    
+                    }    
+                }else{
+                    document.getElementById('fname_error').innerHTML = '';                    
+                    document.getElementById('mname_error').innerHTML = '';                    
+                    document.getElementById('lname_error').innerHTML = '';                    
+                    document.getElementById('address_error').innerHTML = '';                    
+                    document.getElementById('dob_error').innerHTML = '';                    
+                    document.getElementById('mobileno_error').innerHTML = '';                    
+                    document.getElementById('email_error').innerHTML = '';                    
+                    document.getElementById('password_error').innerHTML = '';                    
+
+                    document.getElementById('fname').value = '';
+                    document.getElementById('mname').value = '';
+                    document.getElementById('lname').value = '';
+                    document.getElementById('address').value = '';
+                    document.getElementById('date').value = '';                    
+                    document.getElementById('experience').value = '';
+                    document.getElementById('mobileno').value = '';
+                    document.getElementById('email').value = '';
+                    document.getElementById('password').value = '';
+
+                    document.getElementById("fname_disp").innerHTML = fname;
+                    document.getElementById("mname_disp").innerHTML = mname;
+                    document.getElementById("lname_disp").innerHTML = lname;
+                    document.getElementById("address_disp").innerHTML = address;
+                    document.getElementById("dob_disp").innerHTML = date;
+                    document.getElementById("gender_disp").innerHTML = gender;
+                    document.getElementById("experience_disp").innerHTML = experience;
+                    document.getElementById("mobileno_disp").innerHTML = mobileno;
+                    document.getElementById("email_disp").innerHTML = email;
+                    
+                    document.getElementById('display_data').style.transform = 'translateY(0px)';
+                }
+                return false;
+            })
+            var cancel = document.getElementById('cancel');
+            cancel.addEventListener('click',()=>{
+                document.getElementById('display_data').style.transform = 'translateY(-100%)';                
+            })
+            console.log(document.baseURI)
+            // console.log(document.onreadystatechange)
+            document.onreadystatechange() = function(){
+                
+            }
+            </script>
+
+    </body>
+</html>

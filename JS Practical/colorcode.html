@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <input type="color" name="color" id="color">
+    <button id="btn">Set Color</button>
+    <br><br><br>
+    <div id="box"></div>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click',()=>{
+            let color = document.getElementById('color').value;
+            document.getElementById('box').style.backgroundColor = color;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+.container{
+    max-width: 1500px;
+    .row{
+        display: flex;
+        .content{
+            width: 54%;
+            background-color: #202020;
+            color: #fff;
+            padding: 0px 60px 0px 40px;
+            display: flex;
+            align-items: center;
+            .lines{
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                gap: 40px 0;
+                .line{
+                    position: relative;
+                    &::after{
+                        content: '';
+                        height: 30px;
+                        width: 2px;
+                        position: absolute;
+                        background: #2b2f2e;
+                    }                
+                    &.active{
+                        &::after{
+                            background-color: #862e2c;
+                        }
+                    }
+                }
+            }
+            div.content-col{
+                text-align: end;
+                width: 80%;
+                h5{
+                    position: relative;
+                    font-size: 24px;
+                    text-transform: uppercase;
+                    font-family: math;
+                    letter-spacing: 1px;
+                    padding-right:20px;
+                   border-right: 4px solid brown;
+                }
+                .designs{
+                    .design{
+                        position: relative;
+                        margin-bottom: 25px;
+                        .icon{
+                            position: absolute;
+                            right: -85px;
+                            top: 33%;
+                            background: #fff;
+                            color: #000;
+                            border-radius: 50%;
+                            border: 3px solid gray;
+                            height: 50px;
+                            width: 50px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            span{
+                                font-size: 18px;
+                            }                            
+                        }
+                        h6{
+                            color: brown;
+                            margin: 0;
+                            font-size: 18px;
+                            font-family: system-ui;
+                            letter-spacing: 1px;
+                            line-height: 1.8;
+                            text-transform: uppercase;
+                        }
+                        p{
+                            color: gray;
+                            margin: 0;
+                            line-height: 1.8;
+                        }
+                    }
+                }
+            }
+        }
+        .image{
+            width: 45%;
+            height: 550px;
+            img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}

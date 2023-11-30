@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: pink;
+            padding: 10px 20px;
+        }
+        body{            
+            
+        }
+        .row{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+        .logo{
+            font-size:50px;
+            color: blue;
+        }
+        button{
+            height: fit-content;
+            padding: 10px;
+            background-color: transparent;
+            font-size:25px;
+            border: none;
+        }
+        .menu{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            transition: 1s cubic-bezier(0.53, 0.19, 0.39, 0.9) all;
+        }
+        a{
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+        }
+        @media screen and (max-width: 576px){   
+            header{
+                padding: 0;
+            }         
+            .menu{
+                position: absolute;
+                left: 0;
+                width: 0%;
+                top: 50px;
+                background-color: black;
+                flex-direction: column;
+                padding: 10px 0;    
+                visibility: hidden;                            
+            }
+            .show{      
+                width: 100%;          
+                padding: 10px 20px;
+                visibility: visible;                            
+            }
+            a{
+                color: #fff;
+            }
+        }
+        @media screen and (min-width: 576px){     
+            header{
+                padding: 0;
+            }        
+            .menu{
+                position: absolute;
+                left: 0;
+                top: 55px;
+                width: 0%;
+                background-color: black;
+                flex-direction: column;
+                padding: 10px 0;          
+                visibility: hidden;                                  
+            }
+            .show{
+                padding: 10px 20px;
+                width: 100%;
+                visibility: visible;                            
+            }
+            a{
+                color: #fff;
+            }
+        }
+        @media screen and (min-width: 768px){  
+            header{
+                padding: 10px 20px;
+            }          
+            .menu{
+                position: unset;
+                left: unset;
+                top: unset;
+                width: unset;
+                background-color: unset;
+                flex-direction: unset;
+                padding:unset;
+                transform:unset;
+                visibility: visible;
+            }
+            .show{
+                transform: unset;
+            }
+            a{
+                color: unset;
+            }
+            button{
+                display: none;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <div class="header-p">
+                <div class="row">
+                    <div class="logo">
+                        W3 Schools
+                    </div>
+                    <button id="btn"><div class="fa fa-bars"></div></button>
+                    <ul class="menu">
+                        <li><a href="#" class="menu-link">Home</a></li>
+                        <li><a href="#" class="menu-link">About</a></li>
+                        <li><a href="#" class="menu-link">Contact</a></li>
+                        <li><a href="#" class="menu-link">Help</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <script>
+            let btn = document.getElementById('btn');
+            btn.addEventListener('click',()=>{
+                document.querySelector('.menu').classList.toggle('show')
+            })
+        </script>
+    </body>
+</html>

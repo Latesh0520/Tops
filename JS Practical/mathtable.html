@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+    </style>
+    </head>
+    <body>
+        <form action="#">
+            <input type="text" id="number">
+            <button id="btn" type="submit" onclick="return mathtable()">Submit</button>
+            <span id="error"></span>
+        </form>
+        <br>
+        <div id="mathtable"></div>
+
+        <script>
+        function mathtable(){    
+            let pattern = /^[0-9]/;
+            var number_value = document.getElementById('number');
+            let num = number_value.value;
+
+            if(num == ''){
+                document.getElementById('error').innerText = 'Please enter number ';                
+                return false;
+            }
+            else if(!(num.match(pattern))){                                
+                document.getElementById('error').innerText = 'Please enter valid number';
+                return false;
+            }
+            else{                
+                var table = '';
+                for(let a = 1; a<=10;a++){  
+                    table += num + '*' + a + '=' + (num*a) + '<br>';
+
+                }
+                document.getElementById('mathtable').innerHTML = table;
+                document.getElementById('error').innerText = '';
+                number_value.value = ''
+                return false;
+            }
+        }
+    </script>
+    </body>
+</html>

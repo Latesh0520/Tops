@@ -1,0 +1,110 @@
+@import './mixin';
+@media (max-width: 510px) {
+    .container {
+        max-width: 540px;
+        padding: 0;
+    }
+    .timeline-section{        
+        .row{        
+            .timeline-review{
+                .timeline{
+                    padding: 10px !important;
+                    width: 220px !important;
+                    h2{
+                        font-size: 14px;
+                    }
+                    .timeline-content{
+                        ul{
+                            li{
+
+                                &::after{
+                                    top: 35px !important;
+                                    left: 14px;
+                                    height: 140px !important;
+                                }
+                                &:last-child {
+                                    &::after {
+                                        top: 220px !important;
+                                        height: 50px !important;
+                                    }
+    
+                                }
+                            }
+                        }
+                        .time{
+                            .text{
+                                h4{
+                                    font-size: 11px !important;
+                                }
+                                p{
+                                    font-size: 9px !important;
+                                }
+                            }
+                            .icon{
+                                .fa-solid{
+                                    font-size: 8px;
+                                    padding: 6px;
+                                }
+                            }
+                            
+                        }
+                        .tag-message{                            
+                            li{
+                                margin-top: 10px;
+                                padding: 5px !important;
+                                p{
+                                    font-size: 9px !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                .message{
+                    padding: 10px !important;
+                    width: 200px !important;
+                    height: 200px !important;
+                    left: 150px !important;
+                    .message-box{
+                        height: 70px !important;
+                        padding: 10px;
+                        font-size: 11px;
+                    }
+                    .send-btn{
+                        width: 100%;
+                        button{
+                            padding: 5px 10px;
+                        }
+                    }
+                }
+            }
+            .survey{                
+                .list{
+                    .list-data{
+                        padding: 27px 50px !important;                        
+                    }
+                }
+            }
+        }
+    }
+    .work-everyday{
+        .graphs{
+            .launched-project{
+                width: 30% !important;
+                padding: 8px !important;
+                .heading{
+                    font-size: 14px !important;
+                }
+                .graph{
+                    .bar{
+                        .number,.month-text{
+                            font-size: 8px;
+                        }
+                        .bar-color{
+                            width: 15px !important;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}

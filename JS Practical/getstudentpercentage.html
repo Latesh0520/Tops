@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                display: grid;
+                height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+            .msg{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div>   
+            <h1>Markssheet for Information technology</h1>
+            <div style>
+                <span id="missmark"></span>
+                <form action="#">
+                    <label for>C Language</label>
+                    <input type="text" id="c" onkeyup="keyup_func('c')"
+                        maxlength="2">
+                    <span id="c_msg" class="msg"></span>
+                    <br><br>
+                    <label for>C++ Language</label>
+                    <input type="text" id="cplus" onkeyup="keyup_func('cplus')"
+                        maxlength="2">
+                    <span id="cplus_msg" class="msg"></span>
+                    <br><br>
+                    <label for>Database</label>
+                    <input type="text" id="database"
+                        onkeyup="keyup_func('database')" maxlength="2">
+                    <span id="database_msg" class="msg"></span>
+                    <br><br>
+                    <label for>HTML</label>
+                    <input type="text" id="html" onkeyup="keyup_func('html')"
+                        maxlength="2">
+                    <span id="html_msg" class="msg"></span>
+                    <br><br>
+                    <label for>CSS</label>
+                    <input type="text" id="css" onkeyup="keyup_func('css')"
+                        maxlength="2">
+                    <span id="css_msg" class="msg"></span>
+                    <br><br>
+                    <label for>PHP</label>
+                    <input type="text" id="php" onkeyup="keyup_func('php')"
+                        maxlength="2">
+                    <span id="php_msg" class="msg"></span>
+                    <br><br>
+                    <label for>Core Java</label>
+                    <input type="text" id="java" onkeyup="keyup_func('java')"
+                        maxlength="2">
+                    <span id="java_msg" class="msg"></span>
+                    <br><br>
+                    <button onclick="return getpercentage()">Submit</button>
+                </form>
+            </div>
+            <div>
+                <p>Total Marks of: <span id="totalMarks">0</span>/350</p>
+                <p>Student percentage is: <span id="percentage">0%</span></p>
+                <p>You Are: <span id="passfail"></span></p>
+            </div>
+        </div>
+        <script>
+        function getpercentage(){
+            let c = document.getElementById('c');
+            let cplus = document.getElementById('cplus');
+            let database= document.getElementById('database');
+            let html= document.getElementById('html');
+            let css= document.getElementById('css');
+            let php= document.getElementById('php');
+            let java= document.getElementById('java');
+            
+            if((c.value == '') || (cplus.value == '') || (database.value == '') || (html.value == '') || (css.value == '') || (php.value == '') || (java.value == '')){
+                document.getElementById('missmark').innerText = 'Please must be fill all subject marks';                
+                return false;
+            }else{
+                document.getElementById('missmark').innerText = '';
+                let markstotal = parseInt(c.value) + parseInt(cplus.value) + parseInt(database.value) + parseInt(html.value) + parseInt(css.value) + parseInt(php.value) + parseInt(java.value )                
+                let perc = ((markstotal / 350) * 100).toFixed(2);
+                if(markstotal > 140){
+                    document.getElementById('totalMarks').innerHTML = '<span style="color:blue">'+markstotal + '</span>';
+                    document.getElementById('percentage').innerHTML = '<span style="color:blue">'+perc + '%</span>';
+                    document.getElementById('passfail').innerHTML = '<span style="color:blue">Pass</span>'
+                }else{
+                    document.getElementById('totalMarks').innerHTML = '<span style="color:red">'+markstotal + '</span>';
+                    document.getElementById('percentage').innerHTML = '<span style="color:red">'+perc + '%</span>';
+                    document.getElementById('passfail').innerHTML = '<span style="color:red">Fail</span>'
+                }
+                c.value = '';  
+                cplus.value = '';  
+                database.value = '';   
+                html.value = '';   
+                css.value = '';
+                php.value = '';
+                java.value = '';   
+                return false
+            }
+        }
+        function keyup_func(id){
+            let num_reg = /^[0-9]*$/;
+            let num_reg1 = /^[/*-+.!@#$%^&]/;
+            item = document.getElementById(id);
+            if(!(item.value.match(num_reg)) || item.value.match(num_reg1)){
+                document.getElementById(id+'_msg').innerText = 'Plase Enter valid values';
+                return false;
+            }else if(item.value > 50){
+                document.getElementById(id+'_msg').innerText = 'Plese Enter valid Marks, marks only less then 50';
+                return false;
+            }else{
+                document.getElementById(id+'_msg').innerText = '';
+            }
+        }
+    </script>
+    </body>
+</html>

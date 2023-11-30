@@ -1,0 +1,72 @@
+@media (max-width: 510px) {
+  .container {
+    max-width: 540px;
+    padding: 0;
+  }
+  .timeline-section .row .timeline-review .timeline {
+    padding: 10px !important;
+    width: 220px !important;
+  }
+  .timeline-section .row .timeline-review .timeline h2 {
+    font-size: 14px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content ul li::after {
+    top: 35px !important;
+    left: 14px;
+    height: 140px !important;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content ul li:last-child::after {
+    top: 220px !important;
+    height: 50px !important;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .time .text h4 {
+    font-size: 11px !important;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .time .text p {
+    font-size: 9px !important;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .time .icon .fa-solid {
+    font-size: 8px;
+    padding: 6px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .tag-message li {
+    margin-top: 10px;
+    padding: 5px !important;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .tag-message li p {
+    font-size: 9px !important;
+  }
+  .timeline-section .row .timeline-review .message {
+    padding: 10px !important;
+    width: 200px !important;
+    height: 200px !important;
+    left: 150px !important;
+  }
+  .timeline-section .row .timeline-review .message .message-box {
+    height: 70px !important;
+    padding: 10px;
+    font-size: 11px;
+  }
+  .timeline-section .row .timeline-review .message .send-btn {
+    width: 100%;
+  }
+  .timeline-section .row .timeline-review .message .send-btn button {
+    padding: 5px 10px;
+  }
+  .timeline-section .row .survey .list .list-data {
+    padding: 27px 50px !important;
+  }
+  .work-everyday .graphs .launched-project {
+    width: 30% !important;
+    padding: 8px !important;
+  }
+  .work-everyday .graphs .launched-project .heading {
+    font-size: 14px !important;
+  }
+  .work-everyday .graphs .launched-project .graph .bar .number, .work-everyday .graphs .launched-project .graph .bar .month-text {
+    font-size: 8px;
+  }
+  .work-everyday .graphs .launched-project .graph .bar .bar-color {
+    width: 15px !important;
+  }
+}/*# sourceMappingURL=max-510.css.map */

@@ -1,0 +1,277 @@
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+  header .menubar .nav-bar {
+    display: flex !important;
+  }
+  header .menubar .bar-icon {
+    display: none;
+  }
+  .tryitfree {
+    width: 90%;
+  }
+  .tryitfree .save {
+    display: initial;
+  }
+  .overview {
+    max-width: 920px;
+  }
+  .overview .sidebar {
+    width: 85px;
+    padding: 0;
+  }
+  .overview .sidebar .profile {
+    height: 100px;
+  }
+  .overview .sidebar .profile img {
+    height: 40px;
+    width: 40px;
+  }
+  .overview .sidebar .iconlist {
+    font-size: 16px;
+  }
+  .overview .content {
+    padding: 20px 40px;
+  }
+  .overview .content .overview-heading {
+    margin-top: 20px;
+    margin-bottom: 35px;
+  }
+  .overview .content .overview-heading h1 {
+    font-size: 24px;
+  }
+  .overview .content .grid .col {
+    padding: 20px;
+  }
+  .overview .content .grid .col .up-down .heading {
+    font-size: 32px;
+  }
+  .overview .content .grid .col .up-down .desc {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .overview .content .grid .col .up-down .percentage .up {
+    font-size: 12px;
+  }
+  .overview .content .grid .col .up-down .percentage .up .fa-solid {
+    font-size: 12px;
+  }
+  .overview .content .grid .col .up-down .percentage .down {
+    font-size: 12px;
+  }
+  .overview .content .grid .col .up-down .percentage .down .fa-solid {
+    font-size: 12px;
+  }
+  .overview .content .grid .col.launched-project .heading {
+    font-size: 16px;
+    margin-bottom: 50px;
+  }
+  .overview .content .grid .col.launched-project .graph .bar .bar-div {
+    width: 32px !important;
+  }
+  .overview .content .grid .col.launched-project .graph .bar .bar-div .bar-color {
+    width: 25px !important;
+  }
+  .overview .content .grid .col.hour-marked .heading {
+    font-size: 16px;
+  }
+  .overview .content .grid .col.hour-marked .graph .hours .number {
+    height: 50px;
+  }
+  .overview .content .grid .col.hour-marked .graph .hours .number .bar {
+    bottom: 60px !important;
+    width: 44px !important;
+    margin-left: 18.5px !important;
+  }
+  .trustedby {
+    margin: 80px 50px;
+  }
+  .timeline-section .container {
+    padding: 0;
+  }
+  .timeline-section .row {
+    flex-direction: unset;
+    gap: unset;
+    margin: unset;
+  }
+  .timeline-section .row .timeline-review .timeline {
+    padding: 20px;
+    width: 340px;
+  }
+  .timeline-section .row .timeline-review .timeline h2 {
+    font-size: 16px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content ul li::after {
+    top: 50px;
+    left: 18px;
+    height: 240px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content ul li:last-child::after {
+    top: 350px;
+    height: 70px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .time .icon .fa-solid {
+    font-size: unset;
+    padding: 10px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .tag-message {
+    margin-left: 45px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .tag-message li {
+    padding: 15px;
+  }
+  .timeline-section .row .timeline-review .timeline .timeline-content .tag-message li p {
+    font-size: 13px;
+  }
+  .timeline-section .row .timeline-review .message {
+    width: 250px;
+    padding: 20px 35px;
+    height: 362px;
+    top: 126px;
+    left: 267px;
+  }
+  .timeline-section .row .timeline-review .message .message-box {
+    height: 195px;
+    padding: 20px;
+  }
+  .timeline-section .row .timeline-review .message .send-btn {
+    width: 100%;
+  }
+  .timeline-section .row .survey {
+    margin-top: unset;
+  }
+  .timeline-section .row .survey .list {
+    width: 100%;
+  }
+  .timeline-section .row .survey .list .list-data {
+    text-align: center;
+    padding: 27px 15px;
+  }
+  .timeline-section .row .survey .list .list-data.active {
+    border-bottom: unset;
+    border-left: 8px solid #794CFF;
+  }
+  .work-easier .heading h2 {
+    font-size: 20px;
+  }
+  .work-easier .row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .work-easier .row .col {
+    display: block;
+  }
+  .work-easier .row .col div {
+    width: unset;
+    margin: auto;
+    text-align: center;
+  }
+  .work-easier .row .col div .img {
+    margin: 0 auto;
+  }
+  .work-easier .viewmorebenefit {
+    display: none;
+  }
+  .work-everyday .row {
+    flex-direction: row;
+  }
+  .work-everyday .row .content {
+    width: unset;
+  }
+  .work-everyday .row .content div {
+    margin-top: unset;
+    text-align: unset;
+  }
+  .work-everyday .row .content h1 {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 60px;
+    color: #35414B;
+    width: 500px;
+    margin: unset;
+    text-align: left;
+  }
+  .work-everyday .row .content p {
+    width: 413px;
+    text-align: left;
+    margin: unset;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .work-everyday .row .content button {
+    width: unset;
+    height: unset;
+  }
+  .work-everyday .row .graphs {
+    width: unset;
+  }
+  .work-everyday .row .graphs .hour-marked {
+    width: 400px;
+  }
+  .work-everyday .row .graphs .hour-marked .graph .hour-number, .work-everyday .row .graphs .hour-marked .graph .month-col span {
+    font-size: 16px;
+  }
+  .work-everyday .row .graphs .hour-marked .graph .bar {
+    width: 26px !important;
+  }
+  .work-everyday .row .graphs .launched-project {
+    top: 180px;
+    left: 240px;
+    padding: 15px;
+  }
+  .work-everyday .row .graphs .launched-project .graph span {
+    font-size: 11px;
+    padding: 5px 0;
+  }
+  .testimonials .heading {
+    font-size: 22px;
+    width: 250px;
+    line-height: 25px;
+  }
+  .testimonials .desc {
+    font-size: 20px;
+  }
+  .testimonials .row {
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+  }
+  .testimonials .row .col {
+    display: flex;
+  }
+  .testimonials .row .col:nth-child(1) {
+    display: flex;
+    border-top: 4px solid #35414B;
+    text-align: left;
+  }
+  .app-gplay-appstore-section {
+    background-color: unset;
+  }
+  .app-gplay-appstore-section .app-gplay-appstore {
+    padding: 50px 30px;
+    background-color: #796EFF;
+  }
+  .app-gplay-appstore-section .app-gplay-appstore .row {
+    display: flex;
+  }
+  .app-gplay-appstore-section .app-gplay-appstore .row .col h2 {
+    font-size: 32px;
+    line-height: 48px;
+    text-align: left;
+  }
+  footer .upper-footer .row {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  footer .upper-footer .row .col .heading {
+    margin: 10px 0;
+    display: unset;
+  }
+  footer .upper-footer .row .col .heading span.fa-solid {
+    display: none;
+  }
+  footer .upper-footer .row .col ul {
+    display: block;
+  }
+  footer .bottom-footer .social {
+    display: block;
+  }
+}/*# sourceMappingURL=min-992.css.map */
