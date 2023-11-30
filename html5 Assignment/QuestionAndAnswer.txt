@@ -1,0 +1,90 @@
+    Q.1. What are the new tags added in HTML5?
+    Ans:        
+        <header>: Represents introductory content, typically containing navigation links, logos, or headings.
+        <footer>: Denotes the footer section of a document or a section, often containing copyright information, authorship details, or related links.          
+        <nav>: Defines a section of navigation links within a document.         
+        <article>: Represents an independent piece of content, such as a blog post, article, or forum post.         
+        <section>: Defines a thematic grouping of content within a document.            
+        <aside>: Represents content tangentially related to the main content, like sidebars or call-out boxes.          
+        <main>: Specifies the main content of a document, excluding header, footer, and other auxiliary content.            
+        <figure> and <figcaption>: <figure> is used to encapsulate media content like images, videos, diagrams, etc., while <figcaption> provides a caption or description for the content within <figure>.         
+        <time>: Used to represent a specific time or date.       
+        <progress>: Creates a progress bar or indicator, often used to show the completion status of a task.
+
+===========================================================================================================================
+    Q.2. How to embed audio and video in a webpage?
+    Ans:
+        To embed audio and video in a webpage, HTML provides the <audio> and <video> elements respectively.
+
+        Embedding Audio:
+        To embed audio, you can use the <audio> element and specify the audio file's source using the src attribute:
+        <audio controls>
+            <source src="audio-file.mp3" type="audio/mpeg">
+        </audio>
+        Explanation:
+        <audio>: This is the element used to embed audio content.
+        controls: This attribute adds controls like play, pause, volume, etc., to the audio player.
+        <source>: Specifies the audio file source with the src attribute and the type attribute indicating the MIME type of the audio file. Multiple <source> elements can be used to provide alternative audio formats for better browser compatibility.
+        The text within the <audio> tag is displayed in browsers that do not support the <audio> element.
+        
+        Embedding Video:
+        To embed video, use the <video> element and define the video file source(s) using the <source> element(s):
+        <video controls width="640" height="360">
+            <source src="video-file.mp4" type="video/mp4">
+        </video>
+        Explanation:
+        <video>: This element is used for embedding video content.
+        controls: Similar to the <audio> element, this attribute adds controls to the video player.
+        width and height: These attributes set the dimensions of the video player.
+        <source>: Specifies the video file source with the src attribute and the type attribute indicating the MIME type of the video file. As with audio, multiple <source> elements can be used for different video formats.
+======================================================================================================================================
+    Q.3. Semantic element in HTML5?
+    Ans: 
+        HTML5 introduced several semantic elements that provide more meaning to the content, making it clearer and more structured for both browsers and developers. Some of these semantic elements include:
+       
+        <header>: Represents introductory content or a group of introductory elements, often containing headings, navigation links, logos, etc.
+        <footer>: Represents the footer of a document or a section, typically containing copyright information, authorship details, related links, etc.
+        <nav>: Defines a section containing navigation links, helping to identify blocks of navigation within a document.
+        <article>: Represents an independent, self-contained piece of content within a document, such as a blog post, news article, comment, etc.
+        <section>: Defines a thematic grouping of content within a document. It helps in structuring and organizing content based on themes or subjects.
+        <aside>: Represents content that is related to the main content but not central to it, like sidebars, call-out boxes, or tangentially related content.
+        <main>: Specifies the main content of a document, excluding header, footer, and other auxiliary content.
+        <figure> and <figcaption>: <figure> encapsulates media content like images, videos, diagrams, etc., while <figcaption> provides a caption or description for the content within <figure>.
+
+=====================================================================================================================================
+
+    Q.4. Canvas and SVG tags?
+    Ans: 
+        The <canvas> and <svg> tags are both used in HTML to create graphics and visual elements, but they have different approaches and functionalities.
+
+        <canvas> Tag:
+        The <canvas> element is used to draw graphics, animations, and other visual elements dynamically via JavaScript. It provides a bitmap-based drawing surface that allows for rendering 2D shapes, images, and custom graphics.
+
+        Example:
+        HTML: 
+        <canvas id="myCanvas" width="400" height="200"></canvas>
+
+        JS: 
+        const canvas = document.getElementById('myCanvas');
+        const context = canvas.getContext('2d');
+
+        // Draw a rectangle
+        context.fillStyle = 'blue';
+        context.fillRect(50, 50, 100, 80);
+
+        // Draw a circle
+        context.beginPath();
+        context.arc(300, 100, 50, 0, 2 * Math.PI);
+        context.fillStyle = 'red';
+        context.fill();
+        ---------------------------------------------------
+        <svg> Tag:
+        The <svg> element defines a scalable vector graphics (SVG) image. It uses XML-based markup to create vector-based shapes, text, and images, allowing for precise and scalable graphics.
+
+        Example:
+        <svg width="400" height="200">
+            <rect x="50" y="50" width="100" height="80" fill="blue" />
+            <circle cx="300" cy="100" r="50" fill="red" />
+        </svg>
+        SVG elements can be manipulated using CSS and JavaScript, and because they are vector-based, they scale without losing quality and can be easily animated or interacted with.
+
