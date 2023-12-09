@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .counting{
+            display: flex;
+            justify-content: space-evenly;
+            background-color: rgba(0, 0, 0, 0.122);
+            padding: 20px;
+        }
+        .count{
+            font-size: 30px;
+            color: blueviolet;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="height: 800px;"></div>   
+    <div class="counting">
+        <div class="count" id="count1">0</div>
+        <div class="count" id="count2">0</div>
+        <div class="count" id="count3">0</div>
+        <div class="count" id="count4">0</div>
+    </div> 
+    <div style="height: 500px;"></div>   
+    <script>
+        let check = false;
+        let scrollevent = window.addEventListener('scroll',()=>{
+            let counting = document.querySelector('.counting').getBoundingClientRect().bottom;
+            let windowheight = window.innerHeight;
+           
+            // console.log(counting);
+            // console.log(windowheight < counting);
+            if(check == true){
+                removeEventListener(scrollevent);
+            }else{
+                if(!(windowheight < counting + 100)){
+                    countstart();    
+                    check = true;
+                }
+            }
+        })
+        function countstart(){
+            let count1 = 1;
+            let count2 = 1;
+            let count3 = 1;
+            let count4 = 1;
+            let count1Interval = setInterval(()=>{
+                    count1 += 1;
+                    document.getElementById('count1').innerText =  count1; 
+                    if(count1 == 910){
+                        clearInterval(count1Interval)
+                    }
+                },20);
+                let count2Interval = setInterval(()=>{
+                    count2 += 1;
+                    document.getElementById('count2').innerText =  count2; 
+                    if(count2 == 1399){
+                        clearInterval(count2Interval)
+                    }
+                },13);
+                let count3Interval = setInterval(()=>{
+                    count3 += 1;
+                    document.getElementById('count3').innerText =  count3; 
+                    if(count3 == 1777){
+                        clearInterval(count3Interval)
+                    }
+                },10);
+                let count4Interval = setInterval(()=>{
+                    count4 += 1;
+                    document.getElementById('count4').innerText =  count4; 
+                    if(count4 == 2254){
+                        clearInterval(count4Interval)
+                    }
+                },8);
+        }
+    </script>
+</body>
+</html>
