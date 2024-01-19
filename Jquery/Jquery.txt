@@ -1,0 +1,20 @@
+What is jQuery?
+--> jQuery is a fast, small, and feature-rich JavaScript library designed to simplify the client-side scripting of HTML.
+
+How to Apply CSS Using JQuery?
+--> $('h1').css('color','red');
+
+How to Add Class and Remove Class in Jquery?
+--> 
+<h1 class="text-primary">Hello World</h1>
+$('h1').addClass('text-danger');
+$('h1').removeClass('text-primary');
+
+jQuery Animation?
+--> $('h1').animate({
+      color: 'pink'
+    }, 1000);
+
+
+How to create slider with animation?
+--> Check slider.html
