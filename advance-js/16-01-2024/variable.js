@@ -26,3 +26,29 @@
 // const x2 = 'hello'; // You can not redeclare the variable
 // x2 = 'he[p'; // You can not reassign the value
  
+// // let x = 100;
+// {
+//     // let x = 300;
+//     console.log(x);
+//     {
+//         let x = 200;
+//         console.log(x);
+//     }
+// }
+// console.log(x);
+// The let is local variable 
+
+// {
+//     {
+//         var a = 500;
+//     }
+// }
+// console.log(a); // var is global variable 
+
+// {
+//     {
+//         const a = 800;
+//         console.log(a); // 800
+//     }
+//     // console.log(a); // a is not defined
+// }
