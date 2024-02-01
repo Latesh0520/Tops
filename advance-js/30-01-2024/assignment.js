@@ -1,12 +1,18 @@
 // find a way to use this.keyname store value in object key
 
+// let student = {
+//     fname: 'Latesh',
+//     lname: 'Patil',
+//     get fullname(){
+//         return `${this.fname} ${this.lname}`
+//     } 
+// };
 let student = {
     fname: 'Latesh',
     lname: 'Patil',
-    get fullname(){
-        return this.fname
-    } 
+    fullname : ''
 };
+student.fullname = `${student.fname} ${student.lname}`;
 console.log(student.fullname);
 // ==============================================================
 
@@ -21,7 +27,7 @@ console.log(getObjectKey());
 
 // make fat arrow fun which give a sentence like "Today is 30, January 2024- Tuesday so today is working  day/weekend"
 
-function getDate(){
+const getDate = () => {
     let date = new Date();
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const days =  [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ];
