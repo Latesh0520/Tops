@@ -1,7 +1,4 @@
 class Redcolor{
-    constructor(){
-
-    }
     color(){
         return {color: 'red'};
     }
