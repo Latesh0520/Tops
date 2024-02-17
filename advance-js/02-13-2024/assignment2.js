@@ -6,7 +6,7 @@ class Color {
 }
 
 class Car extends Color{    
-    name(name){
+    name(name){ 
         this.name = name;
         console.log("🚀 ~ Name ~ name ~ name:", this.name)        
     }
